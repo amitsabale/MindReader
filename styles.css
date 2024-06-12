@@ -1,31 +1,12 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #F6F5F2;
-    margin: 0;
-    padding: 0;
-}
-
 .container {
+    position: relative;
     max-width: 600px;
-    margin: 100px auto;
+    margin: 50px auto; 
     text-align: center;
     background-color: #F8D7DA;
-    padding: 40px 20px;
-    border-radius: 15px;
+    padding: 50px 15px;
+    border-radius: 19px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    color: #0C0101;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-p {
-    color: #333;
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
 }
 
 button {
@@ -33,27 +14,52 @@ button {
     background-color: #007BFF;
     color: #FFF;
     border: none;
-    border-radius: 25px;
+    border-radius: 13px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    margin: 10px; 
+    display: inline-block; 
 }
 
 button:hover {
     background-color: #0056B3;
 }
 
-.alert {
-    background-color: #F8D7DA;
-    color: #721C24;
-    padding: 12px 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 1px solid #F5C6CB;
+#nextButton,
+#restartButton,
+#startButton {
+    position: absolute;
+    bottom: -6px;
+    left: 48%;
+    transform: translateX(-50%);
 }
 
-.alert-success {
-    background-color: #D4EDDA;
-    color: #155724;
-    border: 1px solid #C3E6CB;
+.instruction {
+    display: inline-block;
+    font-size: 20px;
+    color: #020109;
+    background-color: rgb(193, 144, 239);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.pendulum {
+    animation: pendulum 2s infinite alternate;
+    color: #007BFF;
+    font-size: 48px;
+    line-height: 1;
+}
+
+@keyframes pendulum {
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
 }

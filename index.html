@@ -8,10 +8,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>  Heyy  </h1>
-        <h1> It's Me Sunny </h1>
-        <p>Let The  Mind Game Begin !</p>
-        <button onclick="startGame()">Start Game</button>
+        <h1>
+            <span class="pendulum">H</span>eyy
+        </h1>
+        <h1>It's Me Sunny</h1>
+        <p>Let The Mind Game Begin!</p>
+        <div id="gameOutput"></div>
+        <button id="startButton" onclick="startGame()">Start Game</button>
+        <button id="nextButton" style="display: none;" onclick="nextStep()">Next</button>
+        <button id="restartButton" style="display: none;" onclick="restartGame()">Restart Game</button>
     </div>
 
     <script src="script.js"></script>
